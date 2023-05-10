@@ -2,11 +2,13 @@
 
     <arg name="gaussian_min" default="100"/>
     <arg name="gaussian_max" default="360"/>
-    <arg name="image_topic" default="stereo/left/image_raw"/>
+    <arg name="stereo_left_topic" default="stereo/left/image_raw"/>
+    <arg name="stereo_right_topic" default="stereo/right/image_raw"/>
 
 
     <node name="opencv_node" pkg="opencv_ros" type="opencv_node" output="screen">
-        <remap from="/image_topic" to="$(arg image_topic)"/>
+        <remap from="/stereo/left" to="$(arg stereo_left_topic)"/>
+        <remap from="/stereo/right" to="$(arg stereo_right_topic)"/>
 
         <param name="gaussian_min" value="$(arg gaussian_min)"/>
         <param name="gaussian_max" value="$(arg gaussian_max)"/>
