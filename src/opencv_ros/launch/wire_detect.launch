@@ -1,7 +1,8 @@
 <launch>
 
-    <arg name="gaussian_min" default="100"/>
-    <arg name="gaussian_max" default="360"/>
+    <arg name="gaussian_min" value="100"/>
+    <arg name="gaussian_max" value="360"/>
+
     <arg name="stereo_left_topic" default="stereo/left/image_raw"/>
     <arg name="stereo_right_topic" default="stereo/right/image_raw"/>
 
@@ -10,8 +11,8 @@
         <remap from="/stereo/left" to="$(arg stereo_left_topic)"/>
         <remap from="/stereo/right" to="$(arg stereo_right_topic)"/>
 
-        <param name="gaussian_min" value="$(arg gaussian_min)"/>
-        <param name="gaussian_max" value="$(arg gaussian_max)"/>
+        <param name="gaussian/min" value="$(arg gaussian_min)" type="int"/>
+        <param name="gaussian/max" value="$(arg gaussian_max)" type="int"/>
     
     </node>
 
