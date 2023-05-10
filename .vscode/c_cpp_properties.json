@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "ROS",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/src/opencv_ros/include/**",
+                "/usr/include/**",
+                "/opt/ros/melodic/include/**"
+                
+            ]
+        }
+    ],
+    "version": 4
+}

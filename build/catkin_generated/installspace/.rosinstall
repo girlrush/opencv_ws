@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /root/opencv_ws/install/setup.sh

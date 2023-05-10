@@ -1,0 +1,8 @@
+prefix=/root/opencv_ws/devel
+
+Name: opencv_ros
+Description: Description of opencv_ros
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge roscpp sensor_msgs std_msgs
